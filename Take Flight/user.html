@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Account</title>
+        <link rel="stylesheet" href="userStyle.css">
+    </head>
+    <body>
+        <nav class="navbar">
+                <a href="/main.html" id="navbar_title">Take Flight!</a>
+                <ul class="navbar_menu">
+                    <li class="navbar_item">
+                        <a href="/user.html" class="navbar_links">Profile</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="/flights.html" class="navbar_links">Flights</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="/create.html" class="navbar_links">Create</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="/drinks.html" class="navbar_links">Drinks</a>
+                    </li>
+                </ul> <br><br>
+        </nav>
+        <form>
+            <!-- Age -->
+            <p>You must be 21+ to create an account</p>
+            <label for="birthday">Enter your birthday</label>
+            <input type="date" id="birthday" name="birthday" max="2000-01-01"> <br>
+
+            <!-- Enter name -->
+            <label for="fullName">Enter your first & last name</label>
+            <input type="text" id="fullName" fullName="fullName"> <br>
+
+            <!-- Username -->
+            <label for="username">Create a username</label>
+            <input type="text" id="username" username="username"> <br>
+
+            <!-- Password -->
+            <label for="pwd">Create a password</label>
+            <input type="password" id="pwd" name="pwd"> <br>
+
+            <!-- Submit to save info -->
+            <button type="button" class="accbtn">Create account</button>
+
+        </form>
+    </body>
+    <!-- name, bday, username, password -->
+</html>

@@ -1,0 +1,80 @@
+/* Add some basic styling to labels and inputs */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: 2%;
+    font-size: 120%; 
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 75%;
+    padding: 2%; 
+    margin-top: 4%; 
+    margin-bottom: 2%; 
+    margin-left: 2%;
+    background-color: white;
+    color: black;
+    font-size: 110%;
+}
+
+/* Style radio buttons and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 1px;
+    margin-left: 4%;
+}
+
+/* Style the form container */
+form {
+    width: 100vw; 
+    height: 1000vh; 
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    font-size: 120%; 
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Style the paragraph elements within the form */
+p {
+    font-weight: bold;
+    margin-top: 2%; 
+    margin-bottom: 2%; 
+    color: ffffff;
+    font-size: 120%; 
+    margin-left: 2%;
+}
+
+
+.header {
+    display: inline-block; 
+    vertical-align: middle;
+    margin-right: 20px; 
+}
+  
+
+h1 {
+    font-weight: bold;
+    margin-top: 2%; 
+    margin-bottom: 2%; 
+    color: ffffff;
+    font-size: 120%; 
+    margin-left: 2%;
+}
+  
+img {
+    width: 100px; 
+    height: auto; 
+}  
+
+.divider {
+    border-top: 4px solid #ffeeaa; 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+
+  

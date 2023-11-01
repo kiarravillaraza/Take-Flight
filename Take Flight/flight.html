@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="module">
+      // Imports the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+  </head>
+    <body>
+      <form class="flight-form">
+        <div class="header">
+          <img src="images/flights.png" alt="A beautiful landscape">
+          <h1>PREPARE TO TAKE FLIGHT</h1>
+        </div>
+        <br>
+        <div class="divider"></div>
+          
+          <!-- Flight name -->
+          <label for="flightName">What do you want to name your flight?</label>
+          <input type="text" class="flight-name" id="flightName" name="flightName"> <br>
+          <br>
+          <div class="divider"></div>
+
+          <!-- Number of drinks -->
+          <label for="quantity">How many drinks do you want in your flight (3-6 drinks):</label>
+          <input type="number" class="num-drinks" id="quantity" name="quantity" min="3" max="6">
+          <div class="divider"></div>
+
+          <!-- Strength of drinks -->
+          <p>How strong do you want your drinks to be?</p>
+          <input type="radio" id="weak" class="strength-weak" name="drinks_strength" value="weak">
+          <label for="weak">Weak</label><br>
+          <input type="radio" id="normal" class="strength-normal" name="drinks_strength" value="normal">
+          <label for="normal">Normal</label><br>
+          <input type="radio" id="strong" class="strength-strong" name="drinks_strength" value="strong">
+          <label for="strong">Strong</label><br>
+          <input type="radio" id="veryStrong" class="strength-veryStrong" name="drinks_strength" value="veryStrong">
+          <label for="veryStrong">Very Strong</label>
+          <div class="divider"></div>
+
+          <!-- Alcohol -->
+          <p>Select your base liquor(s):</p>
+          <input type="checkbox" id="option1" class="liq-vodka" name="option1" value="Vodka">
+          <label for="option1">Vodka</label><br>
+          <input type="checkbox" id="option2" class="liq-rum" name="option2" value="Rum">
+          <label for="option2">Rum</label><br>
+          <input type="checkbox" id="option3" class="liq-tequila" name="option3" value="Tequila">
+          <label for="option3">Tequila</label><br>
+          <input type="checkbox" id="option4" class="liq-whiskey" name="option4" value="Whiskey"> 
+          <label for="option4">Whiskey</label><br>    
+          <input type="checkbox" id="option5" class="liq-gin" name="option5" value="Gin">
+          <label for="option5">Gin</label><br>    
+          <input type="checkbox" id="option6" class="liq-brandy" name="option6" value="Brandy">
+          <label for="option6">Brandy</label><br>
+          <div class="divider"></div>
+
+          <!-- Submit button -->
+          <button class="btn submit-form" type="submit">Submit Form</button>
+      </form>
+      <script src="firebase/firebase.js"></script>
+      <script src="js/main.js"></script>
+    </body>
+</html>
