@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title> Take Flight - Create Flight</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="flightFormStyle.css">
-
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="module">
       // Imports the functions you need from the SDKs you need
@@ -27,9 +26,7 @@
     <div class="divider"></div>
 
     <div class="header">
-        <img src="2p.png" alt="A beautiful landscape">
-        <h1>PREPARE TO TAKE FLIGHT</h1>
-        <img src="2p.png" alt="A beautiful landscape">
+        <h1>ARE YOU READY TO TAKE FLIGHT</h1>
     </div>
 
     <div class="divider"></div>
@@ -75,10 +72,22 @@
           <input type="checkbox" id="option6" class="liq-brandy" name="option6" value="Brandy">
           <label for="option6">Brandy</label><br>
           <div class="divider"></div>
-
+      
+          <div class="flex-container">
+            <div class="nav a item">
+              <img src="2p.png" alt="two planes" height="200" width= "230">
+            </div>
+            <div class="flex-item">
+                <p>
           <!-- Submit button -->
           <button class="btn submit-form" type="submit">Submit Form</button>
-      </form>
+                </p>
+            </div>
+            <div class="flex-item">
+              <img src="2p.png" alt="two planes" height="200" width= "230">
+            </div>      
+      
+        </form>
       <script src="firebase/firebase.js"></script>
       <script src="js/main.js"></script>
     </body>

@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Account</title>
-        <link rel="stylesheet" href="userStyle.css">
+        <title>Take Flight - Create Account</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <script type="module">
             // Imports the functions you need from the SDKs you need
             import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
             import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
-          </script>
+        </script>
           <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
           <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
     </head>
     <body>
-        <nav class="navbar">
-                <a href="/main.html" id="navbar_title">Take Flight!</a>
-                <ul class="navbar_menu">
-                    <li class="navbar_item">
-                        <a href="/user.html" class="navbar_links">Profile</a>
-                    </li>
-                    <li class="navbar_item">
-                        <a href="/flights.html" class="navbar_links">Flights</a>
-                    </li>
-                    <li class="navbar_item">
-                        <a href="/create.html" class="navbar_links">Create</a>
-                    </li>
-                    <li class="navbar_item">
-                        <a href="/drinks.html" class="navbar_links">Drinks</a>
-                    </li>
-                </ul> <br><br>
+        <nav>
+            <a href="#"><img src="profile.png" alt="Profile"> PROFILE</a>
+            <a href="#"><img src="flights.png" alt="Flights"> FLIGHTS</a>
+            <a href="#"><img src="create.png" alt="Create"> CREATE</a>
+            <a href="#"><img src="drinks.png" alt="Drinks"> DRINKS</a>
         </nav>
+    
+        <div class="divider"></div>
+    
+        <div class="header">
+            <h1>PREPARE TO TAKE FLIGHT</h1>
+            <img src="2p.png" alt="A beautiful landscape">
+        </div>
+    
+        <div class="divider"></div>
         <form class="user-form">
             <!-- Age -->
             <p>You must be 21+ to create an account</p>
             <label for="birthday">Enter your birthday</label>
             <input type="date" id="birthday" class="dateOfBirth" name="dateOfBirth" max="2000-01-01"> <br>
+            <div class="divider"></div>
 
             <!-- Enter name -->
             <label for="fullName">Enter your first & last name</label>
             <input type="text" id="fullName" class="fullName" name="fullName"> <br>
+            <div class="divider"></div>
 
             <!-- Username -->
             <label for="username">Create a username</label>
             <input type="text" id="username" class="username" name="username"> <br>
+            <div class="divider"></div>
 
             <!-- Password -->
             <label for="pwd">Create a password</label>
             <input type="password" class="password" id="pwd" name="pwd"> <br>
+            <div class="divider"></div>
 
             <!-- Submit to save info -->
             <button class="btn create-account" type="submit">Create Account</button>
