@@ -1,0 +1,232 @@
+body {
+    background-color: #1c1c1c; /* Set background color */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    align-items: center; /* Center vertically */
+    padding: 10px; /* Adjust spacing as needed */
+    background-color: #1c1c1c; /* Set background color */
+}
+
+.flex-item {
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+}
+
+    .flex-item img {
+        width: 100%; /* Make the image fill the container */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 5px; /* Rounded corners */
+        margin-bottom: 10px; /* Adjust the value for spacing between image and text */
+    }
+
+    .flex-item p {
+        margin: 0; /* Remove default margin from the paragraph */
+        text-align: center; /* Align text to the right */
+        width: 100%; /* Make paragraph width 100% */
+        font-family: 'Raleway', sans-serif; /* Apply Raleway font */
+        color: #ffffff;
+    }
+
+    .flex-item:hover {
+        background-color: #555;
+    }
+
+.divider {
+    border-top: 4px solid #ffeeaa;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #f8f1f1;
+    font-size: 450%;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 40px; /* Equal margin between the images and the heading */
+}
+
+h2 {
+    color: #f8f1f1;
+    font-size: 350%;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 75px; /* Equal margin between the images and the heading */
+}
+
+.flex-item h4 {
+    text-align: left; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+    font-weight: bold;
+    margin-top: -20px;
+    color: #ffffff;
+    font-size: 150%;
+    margin-left: -25px;
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font */
+    margin-bottom: 20px; /* Adjust the value for spacing between image and text */
+}
+
+.flex-item h6 {
+    text-align: left; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+    font-weight: bold;
+    margin-top: -20px;
+    color: #ffffff;
+    font-size: 150%;
+    margin-left: -30px;
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font */
+    margin-bottom: 20px; /* Adjust the value for spacing between image and text */
+}
+
+.flex-item h7 {
+    text-align: left; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+    font-weight: bold;
+    margin-top: -20px;
+    color: #ffffff;
+    font-size: 150%;
+    margin-left: 60px;
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font */
+    margin-bottom: 20px; /* Adjust the value for spacing between image and text */
+}
+
+
+.flex-item h5 {
+    text-align: right; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+    color: #f8f1f1;
+    font-size: 150%;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 70px; /* Equal margin between the images and the heading */
+}
+
+.flex-item h8 {
+    text-align: right; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+    color: #f8f1f1;
+    font-size: 150%;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 50px; /* Equal margin between the images and the heading */
+}
+
+img.drink-image {
+    text-align: right; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: right; /* Center items vertically */
+    width: 150px; /* Adjust the width as needed */
+    height: 300px; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 30px;
+    margin-bottom: 20px; /* Adjust the value for spacing between image and text */
+    margin-top: -100px;
+    transform: rotate(25deg); /* Adjust the angle as needed */
+}
+
+.flex-item h6 {
+    text-align: left; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+    font-weight: bold;
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 150%;
+    margin-left: -25px;
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font */
+    margin-bottom: 40px; /* Adjust the value for spacing between image and text */
+}
+
+img.drink-image2 {
+    text-align: left; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: left; /* Center items vertically */
+    width: 150px; /* Adjust the width as needed */
+    height: 300px; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+    margin-left: 50px;
+    margin-bottom: 20px; /* Adjust the value for spacing between image and text */
+    margin-top: -100px;
+    transform: rotate(-25deg); /* Adjust the angle as needed */
+}
+h2.tequila {
+    margin-left: 920px; /* Adjust the margin for Tequila */
+}
+
+h2.gin {
+    margin-left: 1028px; /* Adjust the margin for Tequila */
+}
+
+h2.whiskey {
+    margin-left: 890px; /* Adjust the margin for Tequila */
+}
+.short-divider-left {
+    border-top: 2px solid #7e96bc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 75px;
+    width: 300px;
+}
+
+.short-divider-right {
+    border-top: 2px solid #7e96bc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 820px;
+    width: 300px;
+}
+
+img.drink-image3 {
+    text-align: right; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: right; /* Center items vertically */
+    width: 400px; /* Adjust the width as needed */
+    height: 300px; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+    margin-left: 30px;
+    margin-bottom: 60px; /* Adjust the value for spacing between image and text */
+    margin-top: -80px; /* Decreased the negative margin */
+    transform: rotate(25deg); /* Adjust the angle as needed */
+}
+
+img.drink-image4 {
+    text-align: left; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: left; /* Center items vertically */
+    width: 125px; /* Adjust the width as needed */
+    height: 250px; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+    margin-left: 50px;
+    margin-bottom: 20px; /* Adjust the value for spacing between image and text */
+    margin-top: -100px;
+    transform: rotate(-25deg); /* Adjust the angle as needed */
+}
+
+img.drink-image6 {
+    text-align: left; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: left; /* Center items vertically */
+    width: 125px; /* Adjust the width as needed */
+    height: 250px; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+    margin-left: 10px;
+    margin-bottom: 20px; /* Adjust the value for spacing between image and text */
+    margin-top: -100px;
+    transform: rotate(25deg); /* Adjust the angle as needed */
+}
