@@ -2,6 +2,37 @@ body {
     background-color: #1c1c1c; /* Set background color */
 }
 
+
+nav {
+    background-color: #1c1c1c;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f8f1f1;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font */
+}
+
+nav a img {
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
 .flex-container {
     display: flex;
     justify-content: space-around; /* Adjust as needed */
@@ -10,31 +41,11 @@ body {
     background-color: #1c1c1c; /* Set background color */
 }
 
-.flex-item {
-    text-align: center; /* Center text horizontally */
+nav a item {
     display: flex; /* Use flexbox for the inner layout */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items vertically */
 }
-
-    .flex-item img {
-        width: 100%; /* Make the image fill the container */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 5px; /* Rounded corners */
-        margin-bottom: 10px; /* Adjust the value for spacing between image and text */
-    }
-
-    .flex-item p {
-        margin: 0; /* Remove default margin from the paragraph */
-        text-align: center; /* Align text to the right */
-        width: 100%; /* Make paragraph width 100% */
-        font-family: 'Raleway', sans-serif; /* Apply Raleway font */
-        color: #ffffff;
-    }
-
-    .flex-item:hover {
-        background-color: #555;
-    }
 
 .divider {
     border-top: 4px solid #ffeeaa;
@@ -56,58 +67,11 @@ h2 {
     margin-left: 75px; /* Equal margin between the images and the heading */
 }
 
-.flex-item h4 {
-    text-align: left; /* Center text horizontally */
-    display: flex; /* Use flexbox for the inner layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items vertically */
-    font-weight: bold;
-    margin-top: -20px;
-    color: #ffffff;
-    font-size: 150%;
-    margin-left: -25px;
-    font-family: 'Raleway', sans-serif; /* Apply Raleway font */
-    margin-bottom: 20px; /* Adjust the value for spacing between image and text */
-}
-
-.flex-item h6 {
-    text-align: left; /* Center text horizontally */
-    display: flex; /* Use flexbox for the inner layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items vertically */
-    font-weight: bold;
-    margin-top: -20px;
-    color: #ffffff;
-    font-size: 150%;
-    margin-left: -30px;
-    font-family: 'Raleway', sans-serif; /* Apply Raleway font */
-    margin-bottom: 20px; /* Adjust the value for spacing between image and text */
-}
-
-.flex-item h7 {
-    text-align: left; /* Center text horizontally */
-    display: flex; /* Use flexbox for the inner layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items vertically */
-    font-weight: bold;
-    margin-top: -20px;
-    color: #ffffff;
-    font-size: 150%;
-    margin-left: 60px;
-    font-family: 'Raleway', sans-serif; /* Apply Raleway font */
-    margin-bottom: 20px; /* Adjust the value for spacing between image and text */
-}
-
-
-.flex-item h5 {
-    text-align: right; /* Center text horizontally */
-    display: flex; /* Use flexbox for the inner layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items vertically */
+h3 {
     color: #f8f1f1;
-    font-size: 150%;
+    font-size: 350%;
     font-family: 'Raleway', sans-serif;
-    margin-left: 70px; /* Equal margin between the images and the heading */
+    margin-left: 300px; /* Equal margin between the images and the heading */
 }
 
 .flex-item h8 {
@@ -118,7 +82,67 @@ h2 {
     color: #f8f1f1;
     font-size: 150%;
     font-family: 'Raleway', sans-serif;
-    margin-left: 50px; /* Equal margin between the images and the heading */
+    margin-left: 100px; /* Equal margin between the images and the heading */
+}
+
+.flex-item h9 {
+    text-align: right; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+    color: #f8f1f1;
+    font-size: 150%;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 110px; /* Equal margin between the images and the heading */
+}
+
+.flex-item h10 {
+    text-align: right; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+    color: #f8f1f1;
+    font-size: 150%;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 90px; /* Equal margin between the images and the heading */
+}
+
+.flex-item h11 {
+    text-align: left; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+    margin-top: -20px;
+    color: #f8f1f1;
+    font-size: 150%;
+    margin-left: -15px;
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font */
+    margin-bottom: 20px; /* Adjust the value for spacing between image and text */
+}
+
+.flex-item h12 {
+    text-align: left; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+    color: #f8f1f1;
+    font-size: 150%;
+    margin-right: 500px;
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font */
+}
+
+
+.flex-item h13 {
+    text-align: left; /* Center text horizontally */
+    display: flex; /* Use flexbox for the inner layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+    margin-top: -20px;
+    color: #f8f1f1;
+    font-size: 150%;
+    margin-left: -110px;
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font */
+    margin-bottom: 20px; /* Adjust the value for spacing between image and text */
 }
 
 img.drink-image {
@@ -144,7 +168,7 @@ img.drink-image {
     margin-top: 20px;
     color: #ffffff;
     font-size: 150%;
-    margin-left: -25px;
+    margin-left: -60px;
     font-family: 'Raleway', sans-serif; /* Apply Raleway font */
     margin-bottom: 40px; /* Adjust the value for spacing between image and text */
 }
@@ -163,15 +187,15 @@ img.drink-image2 {
     transform: rotate(-25deg); /* Adjust the angle as needed */
 }
 h2.tequila {
-    margin-left: 920px; /* Adjust the margin for Tequila */
+    margin-left: 1100px; /* Adjust the margin for Tequila */
 }
 
 h2.gin {
-    margin-left: 1028px; /* Adjust the margin for Tequila */
+    margin-left: 1200px; /* Adjust the margin for Tequila */
 }
 
 h2.whiskey {
-    margin-left: 890px; /* Adjust the margin for Tequila */
+    margin-left: 1070px; /* Adjust the margin for Tequila */
 }
 .short-divider-left {
     border-top: 2px solid #7e96bc;
@@ -185,7 +209,7 @@ h2.whiskey {
     border-top: 2px solid #7e96bc;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 820px;
+    margin-left: 1000px;
     width: 300px;
 }
 
@@ -212,7 +236,7 @@ img.drink-image4 {
     height: 250px; /* Maintain aspect ratio */
     border-radius: 5px; /* Rounded corners */
     margin-left: 50px;
-    margin-bottom: 20px; /* Adjust the value for spacing between image and text */
+    margin-bottom: 50px; /* Adjust the value for spacing between image and text */
     margin-top: -100px;
     transform: rotate(-25deg); /* Adjust the angle as needed */
 }
@@ -222,10 +246,10 @@ img.drink-image6 {
     display: flex; /* Use flexbox for the inner layout */
     flex-direction: column; /* Stack items vertically */
     align-items: left; /* Center items vertically */
-    width: 125px; /* Adjust the width as needed */
-    height: 250px; /* Maintain aspect ratio */
+    width: 200px; /* Adjust the width as needed */
+    height: 325px; /* Maintain aspect ratio */
     border-radius: 5px; /* Rounded corners */
-    margin-left: 10px;
+    margin-left: -350px;
     margin-bottom: 20px; /* Adjust the value for spacing between image and text */
     margin-top: -100px;
     transform: rotate(25deg); /* Adjust the angle as needed */

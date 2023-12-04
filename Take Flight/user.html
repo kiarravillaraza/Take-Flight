@@ -16,17 +16,16 @@
     </head>
     <body>
         <nav>
-            <a href="#"><img src="profile.png" alt="Profile"> PROFILE</a>
+            <a href="http://127.0.0.1:5500/Take%20Flight/user.html#"><img src="profile.png" alt="Profile"> PROFILE</a>
             <a href="#"><img src="flights.png" alt="Flights"> FLIGHTS</a>
-            <a href="#"><img src="create.png" alt="Create"> CREATE</a>
-            <a href="#"><img src="drinks.png" alt="Drinks"> DRINKS</a>
-        </nav>
+            <a href="http://127.0.0.1:5500/Take%20Flight/flight.html#"><img src="create.png" alt="Create"> CREATE</a>
+            <a href="http://127.0.0.1:5500/Take%20Flight/drinks.html#"><img src="drinks.png" alt="Drinks"> DRINKS</a>
+          </nav>
     
         <div class="divider"></div>
     
         <div class="header">
-            <h1>PREPARE TO TAKE FLIGHT</h1>
-            <img src="2p.png" alt="A beautiful landscape">
+            <h2>PREPARE TO TAKE FLIGHT</h2>
         </div>
     
         <div class="divider"></div>
@@ -52,9 +51,18 @@
             <input type="password" class="password" id="pwd" name="pwd"> <br>
             <div class="divider"></div>
 
+            <div class="flex-container">
+                <div class="nav a item">
+                  <img src="2p.png" alt="two planes" height="200" width= "230">
+                </div>
+                <div class="flex-item">
+                    <p>
             <!-- Submit to save info -->
-            <button class="btn create-account" type="submit">Create Account</button>
-
+            <button class="btn create-account" type="submit">Create Account</button>                    </p>
+                </div>
+                <div class="flex-item">
+                  <img src="2p.png" alt="two planes" height="200" width= "230">
+                </div> 
         </form>
         <script src="firebase/firebase.js"></script>
         <script src="js/user.js"></script>

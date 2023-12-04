@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> Take Flight - Drinks</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="drinks.css">
-        </head>
-        <body>
-            <form id="drinks" runat="server" class="form">
-                <div class="flex-container">
-                    <div class="flex-item">
-                        <img src="profile.png" alt="Profile" />
-                        <p>PROFILE</p>
-                    </div>
-                    <div class="flex-item">
-                        <img src="create.png" alt="Create" />
-                        <p>CREATE</p>
-                    </div>
-                    <div class="flex-item">
-                        <img src="flights.png" alt="Flights" />
-                        <p>FLIGHTS</p>
-                    </div>
-                    <div class="flex-item">
-                        <img src="drinks.png" alt="Drinks" />
-                        <p>DRINKS</p>
-                    </div>
-                </div>
-                <div class="divider"></div>
+    <head>
+        <title>Take Flight - Drinks</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
+        <link rel="stylesheet" type="text/css" href="drinks.css">
+        <script type="module">
+            // Imports the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+        </script>
+          <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+    </head>
+    <body>
+        <nav>
+            <a href="http://127.0.0.1:5500/Take%20Flight/user.html#"><img src="profile.png" alt="Profile"> PROFILE</a>
+            <a href="#"><img src="flights.png" alt="Flights"> FLIGHTS</a>
+            <a href="http://127.0.0.1:5500/Take%20Flight/flight.html#"><img src="create.png" alt="Create"> CREATE</a>
+            <a href="http://127.0.0.1:5500/Take%20Flight/drinks.html#"><img src="drinks.png" alt="Drinks"> DRINKS</a>
+          </nav>
     
+        <div class="divider"></div>
+
+        <div class="header">
+            <h3>LEARN ABOUT BASE LIQUORS</h3>
+        </div>
+        <div class="divider"></div>
+
                 <h2> Brandy </h2>
                 <div class="short-divider-left"></div>
                 <div class="flex-container">
                     <div class="flex-item">
-                        <h4>
+                        <h13>
                             Brandy is distilled from fruit like wine grapes, essentially <br />
                             making it distilled wine. Not just grape wine, but any fruit <br />
                             wine such as apple, apricot, cherry, and peaches. Brandy <br />
                             varies by style, and is typically aged in oak and often
                             <br /> blended. It can be made anywhere in the world.
-                        </h4>
+                        </h13>
                     </div>
     
                     <div class="flex-item">
@@ -55,7 +55,7 @@
                     </div>
     
                     <div class="flex-item">
-                        <h5>
+                        <h9>
                             Tequila is distilled from the fermented juices of the blue <br />
                             agave plant. Agave can yield different flavors depending <br />
                             on where the agave is grown in Jalisco. Its flavor is also <br />
@@ -63,7 +63,7 @@
                             not. This factor paired with the length of time spent in <br />
                             the barrel can yield different styles of tequila: <br />
                             Blanco, Reposado, Añejo, and Extra Añejo.
-                        </h5>
+                        </h9>
                     </div>
                 </div>
     
@@ -71,7 +71,7 @@
                 <div class="short-divider-left"></div>
                 <div class="flex-container">
                     <div class="flex-item">
-                        <h7>
+                        <h11>
                             Rum is distilled from a form of sugar, usually sugar cane or <br />
                             molasses. The sweet toasted sugar flavor can vary by style <br />
                             and region. There are two main types of rum: White/Light <br />
@@ -79,7 +79,7 @@
                             rum is aged in oak barrels. Other types include Spiced, <br />
                             Flavored, and Over-Proof. Its naturally sweet flavor makes <br />
                             it one of the most versatile spirits for mixing.
-                        </h7>
+                        </h11>
                     </div>
                     <div class="flex-item">
                         <img src="rum.png" alt="Drinks" class="drink-image3" />
@@ -94,7 +94,7 @@
                     </div>
     
                     <div class="flex-item">
-                        <h5>
+                        <h10>
                             Gin is distilled from neutral grains such as barley, corn, rye, <br />
                             and wheat. Its flavor comes from botanicals where juniper <br />
                             is required, but other botanicals can be added like citrus, <br />
@@ -102,7 +102,7 @@
                             dry, but gives it an herbal character.
                             The types of gin include <br /> London Dry, Plymouth, Old Tom, Genever, and New
                             American.
-                        </h5>
+                        </h10>
                     </div>
                 </div>
     
@@ -110,7 +110,7 @@
                 <div class="short-divider-left"></div>
                 <div class="flex-container">
                     <div class="flex-item">
-                        <h6>
+                        <h12>
                             Vodka can be distilled from any agricultural product that <br />
                             contains sugar or starch. Neutral grains are most popular <br />
                             like rye, corn, and wheat. Vodka can also be gluten-free <br />
@@ -118,7 +118,7 @@
                             anywhere from sweet to savoury and even fruit to <br />
                             herbal. The neutral base makes it extremely <br />
                             versatile spirits.
-                        </h6>
+                        </h12>
                     </div>
                     <div class="flex-item">
                         <img src="vodka.png" alt="Drinks" class="drink-image6" />
