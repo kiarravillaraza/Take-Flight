@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
         <script type="module">
             // Imports the functions you need from the SDKs you need
             import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
@@ -15,12 +15,12 @@
           <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
     </head>
     <body>
-        <nav>
-            <a href="http://127.0.0.1:5500/Take%20Flight/user.html#"><img src="profile.png" alt="Profile"> PROFILE</a>
-            <a href="#"><img src="flights.png" alt="Flights"> FLIGHTS</a>
-            <a href="http://127.0.0.1:5500/Take%20Flight/flight.html#"><img src="create.png" alt="Create"> CREATE</a>
-            <a href="http://127.0.0.1:5500/Take%20Flight/drinks.html#"><img src="drinks.png" alt="Drinks"> DRINKS</a>
-          </nav>
+      <nav>
+        <a href="http://127.0.0.1:5500/Take%20Flight/user.html#"><img src="images/profile.png" alt="Profile"> PROFILE</a>
+        <a href="#"><img src="images/flights.png" alt="Flights"> FLIGHTS</a>
+        <a href="http://127.0.0.1:5500/Take%20Flight/flight.html#"><img src="images/create.png" alt="Create"> CREATE</a>
+        <a href="http://127.0.0.1:5500/Take%20Flight/drinks.html#"><img src="images/drinks.png" alt="Drinks"> DRINKS</a>
+      </nav>
     
         <div class="divider"></div>
     
@@ -53,16 +53,16 @@
 
             <div class="flex-container">
                 <div class="nav a item">
-                  <img src="2p.png" alt="two planes" height="200" width= "230">
+                  <img src="images/2p.png" alt="two planes" height="200" width= "230">
                 </div>
                 <div class="flex-item">
-                    <p>
             <!-- Submit to save info -->
             <button class="btn create-account" type="submit">Create Account</button>                    </p>
                 </div>
                 <div class="flex-item">
-                  <img src="2p.png" alt="two planes" height="200" width= "230">
+                  <img src="images/2p.png" alt="two planes" height="200" width= "230">
                 </div> 
+            </div>
         </form>
         <script src="firebase/firebase.js"></script>
         <script src="js/user.js"></script>

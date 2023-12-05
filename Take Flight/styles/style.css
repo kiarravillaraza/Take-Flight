@@ -76,10 +76,16 @@ input[type="checkbox"] {
     margin-left: 4%;
 }
 
+input[type="date"]
+{
+    color: black;
+
+}
+
 /* Style the form container */
 form {
     width: 100vw; 
-    height: 1000vh; 
+    height: 50vh; 
     margin: 0;
     padding: 0;
     border: 1px solid #1c1c1c;
@@ -117,7 +123,7 @@ p {
     color: #f8f1f1;
     font-size: 450%; 
     font-family: 'Raleway', sans-serif;
-    margin-left: 40px; /* Equal margin between the images and the heading */
+    margin-left: 75px; /* Equal margin between the images and the heading */
 }
 
 .header h2 {
@@ -128,7 +134,7 @@ p {
 }
 
 img {
-    width: 100px; 
+    width: 200px; 
     height: auto; 
 }
 
@@ -139,13 +145,17 @@ img {
 }
 
 .btn.submit-form {
-    width: 293px;
+    width: 400px;
     height: 78px;
-    /* Add other styling as needed */
+    font-size: 100%; 
+    font-family: 'Raleway', sans-serif;
+    margin-left: -50px;
 }
 
 .btn.create-account {
-    width: 293px;
+    width: 400px;
     height: 78px;
-    /* Add other styling as needed */
+    font-size: 100%; 
+    font-family: 'Raleway', sans-serif;
+    margin-left: -50px;
 }
