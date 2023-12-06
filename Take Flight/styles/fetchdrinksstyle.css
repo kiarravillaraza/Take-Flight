@@ -144,27 +144,26 @@ img {
     margin-bottom: 20px;
 }
 
-.btn.submit-form {
-    width: 400px;
-    height: 78px;
-    font-size: 100%; 
-    font-family: 'Raleway', sans-serif;
-    margin-left: -50px;
-}
-
-.btn.create-account {
-    width: 400px;
-    height: 78px;
-    font-size: 100%; 
-    font-family: 'Raleway', sans-serif;
-    margin-left: -50px;
-}
-
-.result-container{
+.result-container {
     font-size: 200%; 
     font-family: 'Raleway', sans-serif;
     margin-left: 50px;
     text-align: center;
+
+}
+.result-container h2 {
+    font-size:250%; 
+    font-family: 'Raleway', sans-serif;
+    margin-left: 50px;
+    text-align: center;
+}
+.result-container h3 {
+    font-size: 100%; 
+    font-family: 'Raleway', sans-serif;
+    margin-left: 50px;
+    text-align: center;
+    color: #7e96bc;
+    margin-top: -50px;
 
 }
 

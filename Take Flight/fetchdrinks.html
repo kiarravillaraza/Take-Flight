@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="styles/newstyle.css">
+    <link rel="stylesheet" type="text/css" href="styles/fetchdrinksstyle.css">
 </head>
 <form>
 <body>
@@ -29,8 +29,20 @@
     <input type="text" class="flight-name" id="flightName" name="flightName"> <br>
     <div class="divider"></div>
 
+  <!-- Strength of drinks -->
+  <p>How strong do you want your drinks to be?</p>
+  <input type="radio" id="weak" class="strength-weak" name="drinks_strength" value="Weak" onchange="saveToSessionStorage()">
+  <label for="weak">Weak</label><br>
+  <input type="radio" id="normal" class="strength-normal" name="drinks_strength" value="Normal" onchange="saveToSessionStorage()">
+  <label for="normal">Normal</label><br>
+  <input type="radio" id="strong" class="strength-strong" name="drinks_strength" value="Strong" onchange="saveToSessionStorage()">
+  <label for="strong">Strong</label><br>
+  <input type="radio" id="veryStrong" class="strength-veryStrong" name="drinks_strength" value="Very Strong" onchange="saveToSessionStorage()">
+  <label for="veryStrong">Very Strong</label>
+  <div class="divider"></div>
+  
     <!-- Base liquors -->
-    <p>Select your base liquor(s):</p>
+    <p>Select your base liquor:</p>
     <input type="radio" id="option1" class="liq-vodka" name="selectedAlcohol" value="Vodka" onchange="saveToSessionStorage()">
     <label for="option1">Vodka</label><br>
     <input type="radio" id="option2" class="liq-rum" name="selectedAlcohol" value="Rum" onchange="saveToSessionStorage()">
@@ -53,26 +65,28 @@
     <div id="result" class ="result-container"></div>
     <br />
     <br />
-    <br />
 
     <div class="divider"></div>
     <br />
 
 </form>
-    <script>
-function saveToSessionStorage() {
-    const flightName = document.getElementById('flightName').value;
-    const numDrinksInput = document.getElementById('amount').value;
-    const selectedAlcohol = document.querySelector('input[name="selectedAlcohol"]:checked');
-    const alcoholInputs = selectedAlcohol.value;
+<script>
+    function saveToSessionStorage() {
+        const flightName = document.getElementById('flightName').value;
+        const numDrinksInput = document.getElementById('amount').value;
+        const selectedAlcohol = document.querySelector('input[name="selectedAlcohol"]:checked');
+        const alcoholInputs = selectedAlcohol.value;
 
-    sessionStorage.setItem('flightName', flightName);
-    sessionStorage.setItem('numDrinksInput', numDrinksInput);
-    sessionStorage.setItem('alcoholInputs', alcoholInputs);
-    sessionStorage.setItem('selectedAlcohol', selectedAlcohol);
+        const selectedStrength = document.querySelector('input[name="drinks_strength"]:checked');
+        const drinksStrength = selectedStrength.value;
 
-    fetchDrinks();
-}
+        sessionStorage.setItem('flightName', flightName);
+        sessionStorage.setItem('numDrinksInput', numDrinksInput);
+        sessionStorage.setItem('alcoholInputs', alcoholInputs);
+        sessionStorage.setItem('drinks_strength', drinksStrength);
+
+        fetchDrinks();
+    }
 
     function fetchDrinks() {
         const category = sessionStorage.getItem('alcoholInputs');
@@ -103,14 +117,20 @@ function saveToSessionStorage() {
     }
 
     const flightName = sessionStorage.getItem('flightName') || 'Your Flight';
-    const selectedStrength = sessionStorage.getItem('drinks_strength');
+    const selectedStrength = sessionStorage.getItem('drinks_strength') || 'Normal'; // Default to 'Normal' if not selected
+    const amount = sessionStorage.getItem('numDrinksInput') || 3;
 
-    //Creates a heading to display flight name
+    // Creates a heading to display flight name, strength, and amount
     const heading = document.createElement('h2');
-    heading.textContent = flightName;
+    heading.textContent = flightName.toUpperCase();
     resultContainer.appendChild(heading);
 
-    //Creates unordered list to display drink list
+    // Displays drinks strength and amount as an italicized h3 element
+    const addtionalInfo = document.createElement('h3');
+    addtionalInfo.innerHTML = `<i>Strength: ${selectedStrength}</i> | ${amount} drinks`;
+    resultContainer.appendChild(addtionalInfo);
+
+    // Creates unordered list to display drink list
     const ul = document.createElement('ul');
     drinks.forEach(drink => {
         const li = document.createElement('li');
@@ -120,6 +140,7 @@ function saveToSessionStorage() {
 
     resultContainer.appendChild(ul);
 }
+
 
         // Function to shuffle drink array so that drinks are returned randomized instead of alphabetically
     function shuffleArray(array) {
