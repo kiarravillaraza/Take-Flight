@@ -25,3 +25,27 @@ userForm.addEventListener("submit", (e) => {
             userForm.reset();
         });
 });
+
+function storeCredentialsAndCreateAccount(username, password, birthday, fullName) { // Store credentials in sessionStorage
+    sessionStorage.setItem('username', username);
+    sessionStorage.setItem('password', password);
+
+    // Firebase Authentication
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, username, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+
+            const userDocRef = doc(db, "users", user.uid); // stores in Firebase(?)
+            setDoc(userDocRef, {
+                username: username,
+                birthday: birthday,
+                fullName: fullName
+            })
+            .then(() => {
+                console.log("User info recorded");
+            });
+        });
+}
+
+
