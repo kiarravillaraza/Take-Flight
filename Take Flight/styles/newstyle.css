@@ -85,7 +85,7 @@ input[type="date"]
 /* Style the form container */
 form {
     width: 100vw; 
-    height: 50vh; 
+    height: 300vh; 
     margin: 0;
     padding: 0;
     border: 1px solid #1c1c1c;
@@ -158,4 +158,16 @@ img {
     font-size: 100%; 
     font-family: 'Raleway', sans-serif;
     margin-left: -50px;
+}
+
+.result-container{
+    font-size: 200%; 
+    font-family: 'Raleway', sans-serif;
+    margin-left: 50px;
+    text-align: center;
+
+}
+
+.result-container ul {
+    list-style-type: none;
 }

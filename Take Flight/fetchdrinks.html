@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/newstyle.css">
 </head>
 <form>
 <body>
     <nav>
         <a href="http://127.0.0.1:5500/Take%20Flight/user.html#"><img src="images/profile.png" alt="Profile"> PROFILE</a>
-        <a href="#"><img src="images/flights.png" alt="Flights"> FLIGHTS</a>
+        <a href="http://127.0.0.1:5500/Take%20Flight/fetchdrinks.html#"><img src="images/flights.png" alt="Flights"> FLIGHTS</a>
         <a href="http://127.0.0.1:5500/Take%20Flight/flight.html#"><img src="images/create.png" alt="Create"> CREATE</a>
         <a href="http://127.0.0.1:5500/Take%20Flight/drinks.html#"><img src="images/drinks.png" alt="Drinks"> DRINKS</a>
       </nav>
@@ -29,6 +29,7 @@
     <input type="text" class="flight-name" id="flightName" name="flightName"> <br>
     <div class="divider"></div>
 
+    <!-- Base liquors -->
     <p>Select your base liquor(s):</p>
     <input type="radio" id="option1" class="liq-vodka" name="selectedAlcohol" value="Vodka" onchange="saveToSessionStorage()">
     <label for="option1">Vodka</label><br>
@@ -44,13 +45,19 @@
     <label for="option6">Brandy</label><br>
     <div class="divider"></div>
     
-    
-
-    <label for="amount">Enter Amount of Drinks:</label>
+    <!-- Number of drinks -->
+    <label for="amount">Select number of drinks for your flight</label>
     <input type="number" id="amount" min="3" value="3" onchange="saveToSessionStorage()">
     <div class="divider"></div>
 
-    <div id="result"></div>
+    <div id="result" class ="result-container"></div>
+    <br />
+    <br />
+    <br />
+
+    <div class="divider"></div>
+    <br />
+
 </form>
     <script>
 function saveToSessionStorage() {
@@ -64,30 +71,29 @@ function saveToSessionStorage() {
     sessionStorage.setItem('alcoholInputs', alcoholInputs);
     sessionStorage.setItem('selectedAlcohol', selectedAlcohol);
 
-
     fetchDrinks();
 }
 
-        function fetchDrinks() {
-            const category = sessionStorage.getItem('alcoholInputs');
-            const amount = sessionStorage.getItem('numDrinksInput') || 3;
+    function fetchDrinks() {
+        const category = sessionStorage.getItem('alcoholInputs');
+        const amount = sessionStorage.getItem('numDrinksInput') || 3;
 
-            const apiUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${category}`;
+        const apiUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${category}`;
 
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    const drinks = data.drinks;
-                    shuffleArray(drinks); // Randomizes drinks
-                    const selectedDrinks = drinks.slice(0, amount);
-                    displayDrinks(selectedDrinks);
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const drinks = data.drinks;
+                shuffleArray(drinks); // Randomizes drinks
+                const selectedDrinks = drinks.slice(0, amount);
+                displayDrinks(selectedDrinks);
                 })
-                .catch(error => {
-                    console.error('Error fetching data:', error);
-                });
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
         }
 
-        function displayDrinks(drinks) {
+    function displayDrinks(drinks) {
     const resultContainer = document.getElementById('result');
     resultContainer.innerHTML = '';
 
@@ -99,11 +105,12 @@ function saveToSessionStorage() {
     const flightName = sessionStorage.getItem('flightName') || 'Your Flight';
     const selectedStrength = sessionStorage.getItem('drinks_strength');
 
-    // Display flightName as a heading
+    //Creates a heading to display flight name
     const heading = document.createElement('h2');
     heading.textContent = flightName;
     resultContainer.appendChild(heading);
 
+    //Creates unordered list to display drink list
     const ul = document.createElement('ul');
     drinks.forEach(drink => {
         const li = document.createElement('li');
@@ -114,16 +121,15 @@ function saveToSessionStorage() {
     resultContainer.appendChild(ul);
 }
 
-
-        // Function to shuffle an array
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
+        // Function to shuffle drink array so that drinks are returned randomized instead of alphabetically
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
         }
+    }
 
-        fetchDrinks();
+    fetchDrinks();
     </script>
 
 </body>
