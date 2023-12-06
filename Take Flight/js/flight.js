@@ -25,13 +25,11 @@ flightForm.addEventListener("submit", (e) => {
 
 
 function storeFlightInfo(flightName, numDrinks, strength, selectedAlcohol) {
-    // Store flight information in sessionStorage
     sessionStorage.setItem('flightName', flightName);
     sessionStorage.setItem('numDrinks', numDrinks);
     sessionStorage.setItem('strength', strength);
     sessionStorage.setItem('selectedAlcohol', selectedAlcohol);
 
-    // Example: Firebase Firestore
     const formData = {
         flightName: flightName,
         numDrinks: numDrinks,
