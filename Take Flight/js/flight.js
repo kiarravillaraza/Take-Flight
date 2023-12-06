@@ -8,13 +8,12 @@ const alcoholInputs = document.querySelectorAll('input[name="selectedAlcohol"]')
 flightForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if (validateFlightForm()) {
-        const formData = {
-            flightName: flightNameInput.value,
-            numDrinks: numDrinksInput.value,
-            strength: getSelectedValue(strengthInputs),
-            selectedAlcohol: getSelectedValue(alcoholInputs),
-        };
+    const formData = {
+        flightName: flightNameInput.value,
+        numDrinks: numDrinksInput.value,
+        strength: getSelectedValue(strengthInputs),
+        selectedAlcohol: getSelectedValue(alcoholInputs),
+    };
 
         db.collection("flight-form")
             .doc()
@@ -22,5 +21,4 @@ flightForm.addEventListener("submit", (e) => {
             .then(() => {
                 flightForm.reset();
             });
-    }
-});
+    });
